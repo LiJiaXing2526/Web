@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧星科技</title>
+    <link rel="icon" href="../Images/首页/17.png" type="image/png">
+    <!-- 引入CSS样式 -->
+    <link rel="stylesheet" href="../CSS文件/首页.css" type="text/css">
+    <!-- 引入JavaScript脚本 -->
+    <script src="../JavaScript文件/首页.js"></script>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav>
+    <ul>
+        <!-- 在最右边添加公司logo -->
+        <li class="logo-item">
+            <a href="首页.html">
+                <img src="../Images/首页/17.png" alt="公司logo" title="智慧星"/>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="公司简介.html" class="dropdown-toggle">公司简介</a>
+            <ul class="dropdown-menu">
+                <li><a href="企业概况">企业概况</a></li>
+                <li><a href="荣誉资质">荣誉资质</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="新闻动态.html" class="dropdown-toggle">新闻动态</a>
+            <ul class="dropdown-menu">
+                <li><a href="企业要闻">企业要闻</a></li>
+                <li><a href="行业新闻">行业新闻</a></li>
+                <li><a href="通知公告">通知公告</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="服务支持.html" class="dropdown-toggle">服务支持</a>
+            <ul class="dropdown-menu">
+                <li><a href="资料下载">资料下载</a></li>
+                <li><a href="开放平台">开放平台</a></li>
+            </ul>
+        </li>
+        <li><a href="首页.html">首页</a></li>
+        <li class="dropdown">
+            <a href="产品中心.html" class="dropdown-toggle">产品中心</a>
+            <ul class="dropdown-menu">
+                <li><a href="机器人">机器人</a></li>
+                <li><a href="智能监控">智能监控</a></li>
+                <li><a href="人脸识别">人脸识别</a></li>
+            </ul>
+        </li>
+        <li><a href="科研基地.html">科研基地</a></li>
+        <li class="dropdown">
+            <a href="人才招聘.html" class="dropdown-toggle">人才招聘</a>
+            <ul class="dropdown-menu">
+                <li><a href="欢迎咨询">欢迎咨询</a></li>
+                <li><a href="提交简历">提交简历</a></li>
+            </ul>
+        </li>
+        <!-- 添加登录按钮在最左边 -->
+        <li class="login-item">
+            <a href="注册登录.html">登录</a>
+        </li>
+        <li class="login-item">
+            <a href="注册登录.html">注册</a>
+        </li>
+    </ul>
+</nav>
+<hr class="thick-black-hr">
+<!-- 图片轮播器 -->
+<div id="carousel">
+    <!-- 图片轮播代码 -->
+    <img class="carousel-item" src="../Images/首页/8.jpg" alt="Image 1">
+    <img class="carousel-item" src="../Images/首页/9.jpg" alt="Image 2">
+    <img class="carousel-item" src="../Images/首页/10.jpg" alt="Image 3">
+    <!-- 切换按钮 -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<section id="home">
+    <a href="首页.html">智慧星</a>
+    <h1>欢迎来到我们的网站</h1>
+    <h2>探索我们的最新产品、活动和优惠</h2>
+    <div class="img-container">
+        <img src="../Images/首页/14.jpg" alt="公司最新产品展示" title="机器人" class="responsive-img"/>
+        <img src="../Images/首页/15.jpg" alt="公司最新产品展示" title="智能监控" class="responsive-img"/>
+        <img src="../Images/首页/16.jpg" alt="公司最新产品展示" title="人脸识别" class="responsive-img"/>
+    </div>
+    <h3>我们致力于提供创新的产品和卓越的服务，让您的生活更加美好。</h3>
+    <h3>立即浏览我们的最新产品、参与活动或享受独家优惠吧！不要错过这个机会，立即点击了解更多或参与我们的活动吧！</h3>
+    <a href="产品中心.html" class="btn">了解更多产品</a>
+    <a href="服务支持.html" class="btn">参与活动</a>
+</section>
+
+<!-- 公司简介 -->
+<section id="company-intro">
+    <a href="公司简介.html">公司简介</a>
+    <div class="intro-content">
+        <div class="intro-text">
+            <!-- 文本内容 -->
+            <p><a href="首页.html">智慧星</a>科技是一家积极致力于创新的领先科技企业。我们专注于开发和提供各种先进的解决方案，
+                包括机器人技术、智能监控系统以及人脸识别技术。我们的使命是通过最先进的技术，为客户提供高效、安全、便捷的服务体验。
+                我们不断突破技术边界，追求卓越，力争成为各行业的可信赖合作伙伴。无论是在工业自动化、城市安全监控还是智能化管理领域，
+                我们都将竭尽全力，为客户创造价值，推动社会的科技进步与发展。
+            </p>
+            <div class="service-items">
+                <div class="service-item">
+                    <p><a href="产品中心.html">机器人：</a> 公司致力于研发各种类型的机器人，包括工业机器人、服务机器人和消费级机器人等。</p>
+                </div>
+                <div class="service-item">
+                    <p><a href="产品中心.html">智能监控：</a> 公司开发了先进的智能监控系统，利用图像识别、视频分析和大数据技术实现对各类场景的实时监控和数据分析。</p>
+                </div>
+                <div class="service-item">
+                    <p><a href="产品中心.html">人脸识别：</a> 公司研发了先进的人脸识别技术和解决方案，包括人脸检测、人脸比对和人脸识别等功能。</p>
+                </div>
+            </div>
+        </div>
+        <div class="intro-image">
+            <img src="../Images/首页/13.jpg" alt="公司Logo">
+        </div>
+    </div>
+</section>
+
+<!-- 新闻动态 -->
+<section id="news">
+    <a href="新闻动态.html">新闻动态</a>
+    <ul id="newsList">
+        <!-- ... 新闻列表项 ... -->
+        <li>苹果公司发布全新MacBook Pro，搭载M2 Pro芯片引领性能革新
+            <p>苹果公司今日在全球发布会上正式推出了全新的MacBook Pro系列，这款笔记本电脑搭载了公司最新的M2 Pro芯片，性能得到显著提升。
+            新款MacBook Pro在保持轻薄便携的同时，实现了更快的处理速度、更低的能耗以及更强大的图形处理能力。
+            此次更新不仅满足了专业用户的需求，也进一步巩固了苹果在高端电脑市场的领先地位。</p>
+        </li>
+        <li>特斯拉自动驾驶技术再升级，推动自动驾驶汽车商业化进程
+            <p>特斯拉公司近日宣布对其自动驾驶技术进行了重大升级，新系统能够更准确地识别交通信号和行人，提高了自动驾驶的安全性和可靠性。
+            这一技术升级将加速自动驾驶汽车的商业化进程，并有望在未来几年内实现全面自动驾驶汽车的普及。</p>
+        </li>
+    </ul>
+    <a href="新闻动态.html" id="loadMore" class="">加载更多</a>
+</section>
+
+<!-- 服务支持 -->
+<section id="support">
+    <a href="服务支持.html" >服务支持</a>
+    <div class="support-1">
+        <p>资料下载：<a href="downloads.html">www.zhihuixing.com</a></p>
+        <p>开放平台：<a href="open-platform.html">www.zhihuixing.com</a></p>
+    </div>
+    <div class="service-2">
+        <p>售前服务:<a href="">www.zhihuixing/service.com</a></p>
+        <p>售中服务:<a href="">www.zhihuixing/service.com</a></p>
+        <p>售后服务:<a href="">www.zhihuixing/service.com</a></p>
+    </div>
+</section>
+
+<!-- 产品中心 -->
+<section id="products">
+    <a href="产品中心.html" >产品中心</a>
+    <ul>
+        <li>
+            <h3>机器人产品</h3>
+            <p>机器人产品是现代科技发展的杰出成果之一，它们集成了人工智能、机械控制、传感器技术等多领域的知识。这些机器人产品广泛应用于家庭、
+                医疗、工业、服务等多个领域，极大地提高了生活和工作效率。
+        </li>
+        <li>
+            <h3>智能监控</h3>
+            <p>智能监控是一种基于视频图像信息的安全防范系统，它利用视频监控技术、图像处理技术和人工智能技术，对监控目标进行实时监控、记录、
+                回溯和智能分析。智能监控广泛应用于公安、交通、金融、教育、医疗等多个领域，为社会的安全稳定提供了有力的保障。
+        </li>
+        <li>
+            <h3>人脸识别</h3>
+            <p>人脸识别是一种基于人脸特征信息进行身份识别的技术，它利用摄像机或摄像头采集含有人脸的图像或视频流，通过人脸检测和特征提取技术，
+                对人脸进行识别和比对。人脸识别技术广泛应用于安全监控、身份验证、门禁系统等领域。
+        </li>
+    </ul>
+</section>
+
+<!-- 科研基地 -->
+<section id="research-base">
+    <a href="科研基地.html" >科研基地</a>
+    <p>我们的科研基地坐落于重庆市荣昌区，占地面积广阔，拥有现代化的科研设施和优美的科研环境。这里汇聚了来自世界各地的科研精英，
+        他们共同致力于推动智能机器人技术和智能监控与人脸识别技术的创新发展。</p>
+    <p>研发设备——我们的科研基地配备了国际一流的研发设备，包括高精度机器人制造设备、先进的计算机视觉系统、深度学习算法平台等。</p>
+    <p>研发团队——我们的研发团队由一群经验丰富、技术精湛的科研专家组成。</p>
+    <p>研发方向——我们的研发团队致力于研发更加智能的机器人设备和更加安全和高效的智能监控与人脸识别技术。</p>
+</section>
+
+<!-- 人才招聘 -->
+<section id="jobs">
+    <div class="job-content">
+        <a href="人才招聘.html">人才招聘</a>
+        <p>欢迎咨询：<a href="mailto:hr@zhihuixing.com">hr@zhihuixing.com</a></p>
+        <p>请通过电子邮件发送简历至 <a href="mailto:hr@zhihuixing.com">hr@zhihuixing.com</a>。</p>
+    </div>
+    <div class="social-links">
+        <img src="../Images/首页/微信.jpg" alt="微信二维码" title="扫描关注微信公众号">
+        <img src="../Images/首页/微博.jpg" alt="微博二维码" title="扫描关注微博账号">
+    </div>
+</section>
+
+<!-- 网页底部栏 -->
+<footer>
+    <p>&copy; 2024 智慧星科技公司 | 所有权利保留</p>
+</footer>
+
+<script src="../JavaScript文件/首页.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../Images/首页/2.jpg");
+}
+
+nav {
+    /* 假设nav是块级元素，并且您想要它占据整个宽度 */
+    width: 100%; /* 可选，因为块级元素默认占据100%宽度 */
+    display: flex; /* 使用Flexbox来布局其子元素 */
+    justify-content: center; /* 水平居中nav内部的ul */
+    align-items: center; /* 如果nav有高度，这将垂直居中其内容（但在这里可能不需要） */
+}
+
+nav ul {
+    width: 90%; /* 列表占据父元素（nav）宽度的95% */
+    height: auto;
+    display: flex; /* 列表项将使用Flexbox布局 */
+    justify-content: space-around;
+    align-items: center; /* 垂直居中列表项（如果它们不是单行） */
+    list-style-type: none;
+    padding: 0; /* 移除默认的列表样式内边距 */
+    margin: 0 auto; /* 水平居中ul */
+    background: linear-gradient(to right, #cfbfd7, #37d7ff); /* 渐变背景 */
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    /* 假设你的列表项是链接 */
+    display: block; /* 使得a标签占据整个li的空间 */
+    padding: 10px; /* 为链接添加一些内边距 */
+    transition: all 0.3s ease; /* 平滑过渡效果 */
+}
+
+nav ul li a:hover {
+    /* 鼠标悬停时的样式 */
+    color: #fff; /* 字体颜色变为白色 */
+    background-color: #007bff; /* 背景颜色变为蓝色 */
+}
+
+nav ul li a:active {
+    /* 点击时的样式（通常只在按下鼠标时生效） */
+    color: #f00; /* 字体颜色变为红色（仅为示例） */
+}
+
+/* 将登录和注册按钮放在左侧，使用margin-right将它们与中间项分隔开 */
+nav ul .login-item:first-child {
+    margin-right: auto; /* 将第一个登录按钮推至左侧 */
+}
+
+/* （可选）如果需要，可以为登录和注册按钮添加一些间距 */
+nav ul .login-item:not(:first-child) {
+    margin-left: 0; /* 为第二个登录/注册按钮添加左侧间距 */
+}
+
+/* Logo样式 */
+nav ul .logo-item {
+    /* Logo的样式可以在这里添加，例如限制其最大宽度 */
+    max-width: 100px; /* 假设logo的最大宽度为100px */
+    align-items: center;
+}
+
+nav ul .logo-item img {
+    /* Logo图片的样式可以在这里添加，例如设置高度或最大宽度 */
+    height: 50px; /* 设置logo的高度 */
+    width: auto; /* 保持logo的比例 */
+
+}
+
+.thick-black-hr {
+    border: none; /* 移除默认的边框 */
+    border-top: 3px solid #000; /* 设置顶部边框宽度和颜色为黑色 */
+    width: 90%; /* 可选：设置水平线的宽度为100%，使其占据整行 */
+    margin: 1px auto; /* 上下外边距为20px，并使其水平居中（尽管在这里是多余的，因为默认就是整行）*/
+}
+
+.dropdown {
+    position: relative; /* 确保子菜单相对于这个元素定位 */
+    display: flex; /* 这里的Flexbox可能不是必需的，取决于你的布局需求 */
+    align-items: center; /* 垂直居中 */
+}
+
+/* 隐藏子菜单 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 将子菜单放在父元素下方 */
+    left: 0; /* 左对齐 */
+    width: 100%; /* 宽度与父元素相同 */
+    z-index: 1000; /* 一个较高的值，确保它不会被其他元素覆盖 */
+}
+
+/* 子菜单项样式 */
+.dropdown-menu li {
+    background-color: #75AECB;
+
+}
+
+/* 当父元素被悬停时显示子菜单 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 添加过渡效果 */
+.dropdown-menu {
+    transition: opacity 0.3s ease;
+}
+
+section{
+    width: 90%;
+    margin: 10px auto;
+    background: linear-gradient(#d3ecf6, #03f1f5);
+    padding: 20px 20px 20px 20px;
+}
+header {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    background-color:cyan;
+}
+
+.application-process h2 {
+    text-align: center;
+}
+
+h2{
+    padding-bottom: 15px;
+    margin: 0 auto;
+}
+
+h4{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0 auto;
+}
+.tagline {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.company-intro,
+.job-opportunities,
+.application-process,
+.employee-showcase,
+.company-benefits,
+.contact-us {
+    margin-bottom: 30px;
+}
+
+.job-card,
+.employee-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.apply-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.apply-button:hover {
+    background-color: #45a049;
+}
+
+.company-benefits h2 {
+    text-align: center;
+}
+.company-benefits ul {
+    padding: 0 20px 0 20px;
+}
+
+/* 底部栏样式 */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    position: relative; /* 如果需要相对于某个元素定位，保留这个 */
+    bottom: 0; /* 但这里通常用于绝对或固定定位 */
+    width: 100%;
+    display: flex;
+    align-items: center; /* 垂直居中所有子元素 */
+    justify-content: space-between; /* 将内容分隔到左边和右边 */
+}
+
+.text-content {
+    text-align: center; /* 文本内容居中 */
+    margin: 0 auto;
+}
+
+.text-content p {
+    margin: 0 ; /* 移除段落默认的上下外边距 */
+}
+
+.social-links {
+    display: flex;
+    align-items: center; /* 如果需要垂直居中二维码 */
+}
+
+.social-links img {
+    width: 70px; /* 根据需要调整二维码图片大小 */
+    height: 70px;
+    margin-left: 10px; /* 二维码之间的间距 */
+}
+
+.social-links a:not(:first-child) img {
+    margin-left: 10px; /* 移除第一个二维码的左边距 */
+}

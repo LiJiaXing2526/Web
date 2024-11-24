@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../Images/首页/17.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧星-登录注册</title>
+    <link rel="stylesheet" href="../CSS文件/登录注册.css">
+</head>
+<body>
+<div class="container">
+    <div class="rl-box">
+        <!-- 注册 -->
+        <div class="register-box-content hidden">
+            <div class="box login-box">
+                <div class="login-logo">
+                    <img src="../Images/注册登录/logo.png" alt="">
+                </div>
+                <form id="my-form-1">
+                    <div class="login-box-in">
+                        <div class="login-title">
+                            <span>注册</span>
+                        </div>
+                        <label class="login-form-item">
+                            <input type="text" name="username" tabindex="1" spellcheck="false" autocomplete="off">
+                            <span>
+                                    <b>用户名</b>
+                                </span>
+                        </label>
+                        <label class="login-form-item">
+                            <input type="text" name="email" tabindex="2" spellcheck="false" autocomplete="off">
+                            <span>
+                                    <b>邮箱</b>
+                                </span>
+                        </label>
+                        <label class="login-form-item" id="switch-1">
+                            <input type="password" name="password" tabindex="3" spellcheck="false" autocomplete="off">
+                            <span>
+                                    <b>密码</b>
+                                </span>
+                            <div class="login-eye">
+                                <img src="../Images/注册登录/password.png" alt="">
+                            </div>
+                        </label>
+                        <div class="login-bottom">
+                            <button type="submit">快速注册</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- 登录 -->
+        <div class="login-box-content">
+            <div class="box login-box">
+                <div class="login-logo">
+                    <img src="../Images/注册登录/logo.png">
+                </div>
+                <form id="my-form-2">
+                    <div class="login-box-in">
+                        <div class="login-title">
+                            <span>登录</span>
+                        </div>
+                        <label class="login-form-item">
+                            <input type="text" name="username" tabindex="1" spellcheck="false" autocomplete="off">
+                            <span>
+                                    <b>用户名</b>
+                                </span>
+                        </label>
+                        <label class="login-form-item" id="switch-2">
+                            <input type="password" name="password" tabindex="2" spellcheck="false" autocomplete="off">
+                            <span>
+                                    <b>密码</b>
+                                </span>
+                            <div class="login-eye">
+                                <img src="../Images/注册登录/password.png" alt="">
+                            </div>
+                        </label>
+                        <div class="login-bottom">
+                            <!-- 在登录按钮上添加id -->
+                            <button type="submit" id="login-submit">快速登录</button>
+                        </div>
+                    </div>
+                    <div class="dotted">
+                        <div class="Dot"></div>
+                        <div class="dFont">其他方式登录</div>
+                        <div class="Dot"></div>
+                    </div>
+                    <div class="other">
+                        <div class="icoD"><a href="Https://connect.qq.com" target="_blank" class="icoQ">QQ</a></div>
+                        <div class="icoD"><a href="https://open.weixin.qq.com/connect/qrconnect" target="_blank" class="icoW">微信</a></div>
+                        <div class="icoD"><a href="https://example.com/scan-login" target="_blank" class="icoF">扫码登录</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="display-box left">
+        <h2>智慧星<span>科技</span>有限<span>公司</span></h2>
+        <p>享受<span>智能</span>，科技<span>生活</span></p>
+        <img src="../Images/注册登录/GitHub_CSDN.png" alt="">
+        <p>已有账号</p>
+        <button id="login" class="btn light">去登录</button>
+    </div>
+    <div class="display-box right">
+        <h2><span>智慧星</span>科技<span>有限</span>公司</h2>
+        <p>网上<span>冲浪</span>，细致<span>归纳</span></p>
+        <img src="../Images/注册登录/GZH.png" alt="">
+        <p>没有账号</p>
+        <button id="register" class="btn light">去注册</button>
+    </div>
+</div>
+<script>
+    // 获取元素
+    var login = document.getElementById("login");
+    var register = document.getElementById("register");
+    var rl_box = document.querySelector(".rl-box");
+    var register_box = document.getElementsByClassName("register-box-content")[0];
+    var login_box = document.getElementsByClassName("login-box-content")[0];
+
+    var input_1 = document.getElementById('switch-1').querySelector('input');
+    var img_1 = document.getElementById('switch-1').querySelector('img');
+    var flag = 0; // 不可见
+
+    var input_2 = document.getElementById('switch-2').querySelector('input');
+    var img_2 = document.getElementById('switch-2').querySelector('img');
+
+    // 注册事件
+    register.addEventListener('click', function() {
+        rl_box.style.transform = 'translateX(110%)';
+        login_box.classList.add('hidden');
+        register_box.classList.remove('hidden');
+    })
+
+    login.addEventListener('click', function() {
+        rl_box.style.transform = 'translateX(0%)';
+        register_box.classList.add('hidden');
+        login_box.classList.remove('hidden');
+    })
+
+    img_1.onclick = function() {
+        if (flag == 0) {
+            input_1.type = 'text';
+            img_1.src = './Images/text.png';
+            flag = 1;
+        } else {
+            input_1.type = 'password';
+            img_1.src = './Images/password.png';
+            flag = 0;
+        }
+    }
+
+    img_2.onclick = function() {
+        if (flag == 0) {
+            input_2.type = 'text';
+            img_2.src = './Images/text.png';
+            flag = 1;
+        } else {
+            input_2.type = 'password';
+            img_2.src = './Images/password.png';
+            flag = 0;
+        }
+    }
+
+    // 注册信息的储存
+    document.getElementById("my-form-1").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var username = this.elements["username"].value;
+        var password = this.elements["password"].value;
+
+        // 将注册信息存储在本地存储中
+        localStorage.setItem(username, password);
+
+        // 清空注册表单
+        this.reset();
+    });
+
+    // 登录时的验证
+    document.getElementById("my-form-2").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var username = this.elements["username"].value;
+        var password = this.elements["password"].value;
+
+        // 从本地存储中获取保存的密码
+        var savedPassword = localStorage.getItem(username);
+
+        if (password === savedPassword) {
+            // 密码匹配成功，重定向到网页首页.html文件
+            window.location.href = "首页.html"; // 确保文件名和路径正确
+        } else {
+            // 密码不匹配，提示用户信息错误，并重置表单
+            alert("用户名或密码错误，请重试！");
+            this.reset(); // 仅在密码错误时重置表单
+        }
+    });
+</script>
+</body>
+</html>

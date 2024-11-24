@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智慧星-新闻动态</title>
+    <link rel="icon" href="../Images/首页/17.png" type="image/png">
+    <link href="../CSS文件/新闻动态.css" rel="stylesheet" type="text/css">
+    <script src="../JavaScript文件/新闻动态.js"></script>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav>
+    <ul>
+        <!-- 在最右边添加公司logo -->
+        <li class="logo-item">
+            <a href="首页.html">
+                <img src="../Images/首页/17.png" alt="公司logo" title="智慧星"/>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="公司简介.html" class="dropdown-toggle">公司简介</a>
+            <ul class="dropdown-menu">
+                <li><a href="企业概况">企业概况</a></li>
+                <li><a href="荣誉资质">荣誉资质</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="新闻动态.html" class="dropdown-toggle">新闻动态</a>
+            <ul class="dropdown-menu">
+                <li><a href="企业要闻">企业要闻</a></li>
+                <li><a href="行业新闻">行业新闻</a></li>
+                <li><a href="通知公告">通知公告</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="服务支持.html" class="dropdown-toggle">服务支持</a>
+            <ul class="dropdown-menu">
+                <li><a href="资料下载">资料下载</a></li>
+                <li><a href="开放平台">开放平台</a></li>
+            </ul>
+        </li>
+        <li><a href="首页.html">首页</a></li>
+        <li class="dropdown">
+            <a href="产品中心.html" class="dropdown-toggle">产品中心</a>
+            <ul class="dropdown-menu">
+                <li><a href="机器人">机器人</a></li>
+                <li><a href="智能监控">智能监控</a></li>
+                <li><a href="人脸识别">人脸识别</a></li>
+            </ul>
+        </li>
+        <li><a href="科研基地.html">科研基地</a></li>
+        <li class="dropdown">
+            <a href="人才招聘.html" class="dropdown-toggle">人才招聘</a>
+            <ul class="dropdown-menu">
+                <li><a href="欢迎咨询">欢迎咨询</a></li>
+                <li><a href="提交简历">提交简历</a></li>
+            </ul>
+        </li>
+        <!-- 添加登录按钮在最左边 -->
+        <li class="login-item">
+            <a href="注册登录.html">登录</a>
+        </li>
+        <li class="login-item">
+            <a href="注册登录.html">注册</a>
+        </li>
+    </ul>
+</nav>
+<hr class="thick-black-hr">
+
+<!-- 图片轮播器 -->
+<div id="photo">
+    <!-- 图片轮播代码 -->
+    <img class="photo-item active" src="../Images/新闻动态/1.jpg" alt="Image 1">
+    <img class="photo-item" src="../Images/新闻动态/2.jpg" alt="Image 2">
+    <img class="photo-item" src="../Images/新闻动态/3.jpg" alt="Image 3">
+    <img class="photo-item" src="../Images/新闻动态/4.jpg" alt="Image 4">
+    <img class="photo-item" src="../Images/新闻动态/5.jpg" alt="Image 5">
+    <!-- 切换按钮 -->
+    <a class="up" onclick="plusSlides(-1)">&lt;</a>
+    <a class="down" onclick="plusSlides(1)">&gt;</a>
+</div>
+
+<div class="news-container">
+    <div class="news-column">
+        <h2><a href="guojixinwen">国际新闻</a></h2>
+        <ul>
+            <li>国际机器人大赛圆满落幕，多国选手展现高超技艺</li>
+            <li>智能监控技术在城市广泛部署，提升公共安全水平</li>
+            <li>人脸识别技术助力国际反恐合作，提高边境安全</li>
+            <li>全球气候变化会议达成共识，推动绿色能源发展</li>
+            <li>国际卫生组织发布新冠疫情最新研究报告</li>
+            <li>科技巨头共同签署AI道德准则，规范技术发展</li>
+            <li>欧盟推动数字经济合作，加强跨国技术交流</li>
+            <li>中东地区推进和平进程，降低地区紧张局势</li>
+            <li>亚洲国家共同应对气候变化挑战，加强环境保护合作</li>
+            <li>非洲多国签署自由贸易协定，促进区域经济一体化</li>
+            <li>拉美地区加大科技创新投入，推动经济社会发展</li>
+            <li>北极地区多国开展科研合作，研究气候变化影响</li>
+            <a href="https://news.cctv.com/world/" class="btn">更多新闻</a>
+        </ul>
+    </div>
+    <div class="news-column">
+        <h2><a href="guoneixinwen">国内新闻</a></h2>
+        <ul>
+            <li>国内机器人产业蓬勃发展，助力智能制造升级</li>
+            <li>智能监控技术助力城市治安，提升公共安全水平</li>
+            <li>人脸识别技术在交通管理中广泛应用，提高交通效率</li>
+            <li>国家出台新政策，鼓励科技创新和创业发展</li>
+            <li>环保部门加强空气质量监测，推动生态文明建设</li>
+            <li>多地开展垃圾分类宣传活动，提高居民环保意识</li>
+            <li>农村振兴战略取得显著成效，农民收入稳步增长</li>
+            <li>教育部门深化教育改革，提高教育质量和公平性</li>
+            <li>健康中国行动持续推进，提升全民健康水平</li>
+            <li>文化事业蓬勃发展，传统文化得到保护和传承</li>
+            <li>科技创新引领经济高质量发展，产业结构持续优化</li>
+            <li>国内旅游市场繁荣，推动地方经济发展</li>
+            <a href="https://news.cctv.com/china/" class="btn">更多新闻</a>
+        </ul>
+    </div>
+    <div class="news-column">
+        <h2><a href="gongsixinwen">公司新闻及公告</a></h2>
+        <ul>
+            <li>推出新款智能监控机器人，提升监控效率和安全性</li>
+            <li>人脸识别技术升级，提升安全性能和识别准确性</li>
+            <li>公司荣获智能科技创新奖，肯定技术实力和创新成果</li>
+            <li>公司扩大生产规模，提升产能，满足市场需求</li>
+            <li>新款AI芯片研发成功，性能大幅提升，助力产品升级</li>
+            <li>举办年度科技论坛，邀请业界专家共同探讨科技前沿</li>
+            <li>公司加强国际合作，拓展海外市场，提升品牌影响力</li>
+            <li>公司加大研发投入，推动技术创新和产品创新</li>
+            <li>公司积极履行社会责任，参与公益事业，回馈社会</li>
+            <li>公司优化服务流程，提升客户体验和服务质量</li>
+            <li>公司举办员工技能培训，提升专业素养和创新能力</li>
+            <li>公司发布最新产品路线图，展望未来发展方向</li>
+            <a href="www.zhihuixing/new.com" class="btn">更多新闻</a>
+        </ul>
+    </div>
+</div>
+
+
+<footer>
+    <div class="text-content">
+        <p>&copy; 2024 智慧星科技. 版权所有.</p>
+        <p>隐私政策 | 条款和条件</p>
+    </div>
+    <div class="social-links">
+        <a href="#" target="_blank" title="扫描关注微信公众号">
+            <img src="../Images/首页/微信.jpg" alt="微信二维码">
+        </a>
+        <a href="#" target="_blank" title="扫描关注微博账号">
+            <img src="../Images/首页/微博.jpg" alt="微博二维码">
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>

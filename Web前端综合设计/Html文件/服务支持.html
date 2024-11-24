@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智慧星-服务支持</title>
+    <link rel="icon" href="../Images/首页/17.png" type="image/png">
+    <link href="../CSS文件/服务支持.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- 导航栏 -->
+<nav>
+    <ul>
+        <!-- 在最右边添加公司logo -->
+        <li class="logo-item">
+            <a href="首页.html">
+                <img src="../Images/首页/17.png" alt="公司logo" title="智慧星"/>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="公司简介.html" class="dropdown-toggle">公司简介</a>
+            <ul class="dropdown-menu">
+                <li><a href="企业概况">企业概况</a></li>
+                <li><a href="荣誉资质">荣誉资质</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="新闻动态.html" class="dropdown-toggle">新闻动态</a>
+            <ul class="dropdown-menu">
+                <li><a href="企业要闻">企业要闻</a></li>
+                <li><a href="行业新闻">行业新闻</a></li>
+                <li><a href="通知公告">通知公告</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="服务支持.html" class="dropdown-toggle">服务支持</a>
+            <ul class="dropdown-menu">
+                <li><a href="资料下载">资料下载</a></li>
+                <li><a href="开放平台">开放平台</a></li>
+            </ul>
+        </li>
+        <li><a href="首页.html">首页</a></li>
+        <li class="dropdown">
+            <a href="产品中心.html" class="dropdown-toggle">产品中心</a>
+            <ul class="dropdown-menu">
+                <li><a href="机器人">机器人</a></li>
+                <li><a href="智能监控">智能监控</a></li>
+                <li><a href="人脸识别">人脸识别</a></li>
+            </ul>
+        </li>
+        <li><a href="科研基地.html">科研基地</a></li>
+        <li class="dropdown">
+            <a href="人才招聘.html" class="dropdown-toggle">人才招聘</a>
+            <ul class="dropdown-menu">
+                <li><a href="欢迎咨询">欢迎咨询</a></li>
+                <li><a href="提交简历">提交简历</a></li>
+            </ul>
+        </li>
+        <!-- 添加登录按钮在最左边 -->
+        <li class="login-item">
+            <a href="注册登录.html">登录</a>
+        </li>
+        <li class="login-item">
+            <a href="注册登录.html">注册</a>
+        </li>
+    </ul>
+</nav>
+<hr class="thick-black-hr">
+
+<section id="faq">
+    <h2>常见问题解答</h2>
+    <dl>
+        <dt>问题1: 你们公司的营业时间是什么时候？</dt>
+        <dd>答案1: 我们的营业时间是周一至周五，上午9点至下午5点。周末和公共假期休息。</dd>
+
+        <dt>问题2: 我如何联系你们的客服支持？</dt>
+        <dd>答案2: 您可以通过拨打我们的客服电话123-456-7890，或者发送邮件至[support@example.com](mailto:support@example.com)与我们联系。</dd>
+
+        <dt>问题3: 我购买的商品多久可以发货？</dt>
+        <dd>答案3: 通常情况下，我们会在收到订单后的24小时内处理并发货。但在特殊情况下，如库存不足或节假日，可能会有所延迟。</dd>
+
+        <dt>问题4: 我可以退货或换货吗？</dt>
+        <dd>答案4: 当然可以。如果您购买的商品存在质量问题或者您不满意，您可以在收到商品后的7天内联系我们进行退货或换货。</dd>
+
+        <dt>问题5: 我如何追踪我的订单状态？</dt>
+        <dd>答案5: 您可以在我们的网站上登录您的账户，查看订单详情和物流追踪信息。如果您没有账户，也可以通过订单号在物流公司的网站上进行查询。</dd>
+
+        <!-- 添加更多问题和答案 -->
+    </dl>
+</section>
+
+<section id="support-form">
+    <h2>问题反馈</h2>
+    <form action="/submit-support-request" method="post">
+        <label for="name">姓名:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">邮箱:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="subject">主题:</label>
+        <input type="text" id="subject" name="subject" required><br>
+
+        <label for="message">消息:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+
+        <input type="submit" value="提交">
+    </form>
+</section>
+
+<section id="contact">
+    <h2>联系方式</h2>
+    <p>
+        电话: 123-456-7890
+        <br>
+        邮箱: [support@example.com](mailto:support@example.com)
+        <br>
+        地址: 重庆市荣昌区
+    </p>
+</section>
+
+<!-- 网页底部栏 -->
+<footer>
+    <p>&copy; 2022 智慧星科技公司 | 所有权利保留</p>
+</footer>
+</body>
+</html>

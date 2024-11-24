@@ -1,0 +1,431 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../Images/首页/2.jpg");
+}
+
+nav {
+    /* 假设nav是块级元素，并且您想要它占据整个宽度 */
+    width: 100%; /* 可选，因为块级元素默认占据100%宽度 */
+    display: flex; /* 使用Flexbox来布局其子元素 */
+    justify-content: center; /* 水平居中nav内部的ul */
+    align-items: center; /* 如果nav有高度，这将垂直居中其内容（但在这里可能不需要） */
+}
+
+nav ul {
+    width: 95%; /* 列表占据父元素（nav）宽度的95% */
+    height: auto;
+    display: flex; /* 列表项将使用Flexbox布局 */
+    justify-content: space-around;
+    align-items: center; /* 垂直居中列表项（如果它们不是单行） */
+    list-style-type: none;
+    padding: 0; /* 移除默认的列表样式内边距 */
+    margin: 0 auto; /* 水平居中ul */
+    background: linear-gradient(to right, #cfbfd7, #37d7ff); /* 渐变背景 */
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    /* 假设你的列表项是链接 */
+    display: block; /* 使得a标签占据整个li的空间 */
+    padding: 10px; /* 为链接添加一些内边距 */
+    transition: all 0.3s ease; /* 平滑过渡效果 */
+}
+
+nav ul li a:hover {
+    /* 鼠标悬停时的样式 */
+    color: #fff; /* 字体颜色变为白色 */
+    background-color: #007bff; /* 背景颜色变为蓝色 */
+}
+
+nav ul li a:active {
+    /* 点击时的样式（通常只在按下鼠标时生效） */
+    color: #f00; /* 字体颜色变为红色（仅为示例） */
+}
+
+/* 将登录和注册按钮放在左侧，使用margin-right将它们与中间项分隔开 */
+nav ul .login-item:first-child {
+    margin-right: auto; /* 将第一个登录按钮推至左侧 */
+}
+
+/* （可选）如果需要，可以为登录和注册按钮添加一些间距 */
+nav ul .login-item:not(:first-child) {
+    margin-left: 0; /* 为第二个登录/注册按钮添加左侧间距 */
+}
+
+/* Logo样式 */
+nav ul .logo-item {
+    /* Logo的样式可以在这里添加，例如限制其最大宽度 */
+    max-width: 100px; /* 假设logo的最大宽度为100px */
+    align-items: center;
+}
+
+nav ul .logo-item img {
+    /* Logo图片的样式可以在这里添加，例如设置高度或最大宽度 */
+    height: 50px; /* 设置logo的高度 */
+    width: auto; /* 保持logo的比例 */
+
+}
+
+.thick-black-hr {
+    border: none; /* 移除默认的边框 */
+    border-top: 3px solid #000; /* 设置顶部边框宽度和颜色为黑色 */
+    width: 95%; /* 可选：设置水平线的宽度为100%，使其占据整行 */
+    margin: 1px auto; /* 上下外边距为20px，并使其水平居中（尽管在这里是多余的，因为默认就是整行）*/
+}
+
+.dropdown {
+    position: relative; /* 确保子菜单相对于这个元素定位 */
+    display: flex; /* 这里的Flexbox可能不是必需的，取决于你的布局需求 */
+    align-items: center; /* 垂直居中 */
+}
+
+/* 隐藏子菜单 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 将子菜单放在父元素下方 */
+    left: 0; /* 左对齐 */
+    width: 100%; /* 宽度与父元素相同 */
+    z-index: 1000; /* 一个较高的值，确保它不会被其他元素覆盖 */
+}
+
+/* 子菜单项样式 */
+.dropdown-menu li {
+    background-color: #75AECB;
+
+}
+
+/* 当父元素被悬停时显示子菜单 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 添加过渡效果 */
+.dropdown-menu {
+    transition: opacity 0.3s ease;
+}
+
+#carousel {
+    width: 95%;
+    height: 400px;
+    margin: 0 auto; /* 水平居中ul */
+    position: relative; /* 添加这个以便绝对定位的图片可以相对于这个容器定位 */
+    overflow: hidden;
+}
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none; /* 默认隐藏所有图片 */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.carousel-item.active {
+    display: block; /* 激活时显示图片 */
+    opacity: 1;
+}
+
+/* 切换按钮的基本样式 */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* 垂直居中 */
+    color: white; /* 文本颜色 */
+    font-size: 0.5em; /* 字体大小 */
+    text-align: center;
+    text-decoration: none; /* 移除下划线 */
+    border: none; /* 移除边框 */
+    background-color: rgba(0,0,0,0.5); /* 半透明背景色 */
+    padding: 10px 15px; /* 内边距 */
+    cursor: pointer; /* 鼠标悬停时变为手形图标 */
+    transition: background-color 0.3s ease; /* 过渡效果 */
+}
+
+/* 上一个按钮定位到左侧 */
+.prev {
+    left: 10px;
+}
+
+/* 下一个按钮定位到右侧 */
+.next {
+    right: 10px;
+}
+
+/* 鼠标悬停时改变按钮背景色 */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+section {
+    width: 95%; /* 或者任何你需要的固定或百分比宽度 */
+    margin: 20px auto; /* 上下外边距为 20px，左右外边距自动 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(to right, #f5f1f6, #e7f1f3);
+}
+
+#home a {
+    text-decoration: none; /* 去除下划线 */
+    color: #007BFF; /* 链接颜色 */
+    font-size: 1.2em; /* 字体大小 */
+    display: inline-block; /* 作为行内块级元素显示 */
+    margin-bottom: 10px; /* 下外边距 */
+}
+
+/* 设置标题样式 */
+#home h1, #home h2 {
+    margin: 0 0 20px 0; /* 设置标题之间的间距 */
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-between; /* 根据需要调整图片间距 */
+    flex-wrap: wrap; /* 如果需要，允许图片换行 */
+    margin: 0 -10px;
+}
+
+.responsive-img {
+    width: 100%; /* 图片宽度设为100%，使其适应容器宽度 */
+    height: auto; /* 高度自动以保持图片比例 */
+    max-width: 400px; /* 可选：限制图片最大宽度 */
+    margin: 0 10px; /* 可选：添加图片之间的间距 */
+}
+
+/* 设置按钮的样式 */
+.btn {
+    display: inline-block; /* 让按钮能够和其他元素并排显示 */
+    padding: 10px 20px; /* 设置按钮的内边距 */
+    margin: 20px 0; /* 设置按钮之间的垂直间距 */
+    text-decoration: none; /* 移除下划线 */
+    color: #fff; /* 设置按钮文本颜色 */
+    background-color: #f5dede; /* 设置按钮背景颜色 */
+    border-radius: 5px; /* 设置按钮边框圆角 */
+    transition: background-color 0.3s ease; /* 添加背景颜色过渡效果 */
+}
+
+/* 当鼠标悬停在按钮上时改变样式 */
+.btn:hover {
+    background-color: #e08c8c; /* 鼠标悬停时改变背景颜色 */
+}
+
+#company-intro a {
+    text-decoration: none; /* 去除下划线 */
+    color: #007BFF; /* 链接颜色 */
+    font-size: 1.2em; /* 字体大小 */
+    display: inline-block; /* 作为行内块级元素显示 */
+    margin-bottom: 10px; /* 下外边距 */
+}
+
+#company-intro .intro-content {
+    display: flex;
+    margin-top: 25px;
+    align-items: center; /* 垂直居中 */
+}
+
+#company-intro .intro-text {
+    flex: 1; /* 让文本部分占据可用空间的大部分 */
+    margin-right: 20px; /* 可根据需要调整文本和图片之间的间距 */
+}
+
+#company-intro .intro-image {
+    flex-basis: 300px; /* 设置图片区域的宽度，可根据需要调整 */
+}
+
+#news a {
+    text-decoration: none; /* 去除下划线 */
+    color: #007BFF; /* 链接颜色 */
+    font-size: 1.2em; /* 字体大小 */
+    display: inline-block; /* 作为行内块级元素显示 */
+    margin-bottom: 10px; /* 下外边距 */
+}
+/* 新闻列表样式 */
+#newsList {
+    display: flex; /* 使用Flexbox布局 */
+    flex-wrap: wrap; /* 允许换行，当一行放不下时 */
+    padding: 10px; /* 去除默认的内边距 */
+    list-style-type: none; /* 去除列表样式 */
+    justify-content: space-between; /* 水平方向上项目间的空间分布 */
+}
+
+/* 新闻列表项样式 */
+#newsList li {
+    flex: 0 0 calc(50% - 10px); /* 每个项目占据一半宽度减去一些间距 */
+    margin-bottom: 20px; /* 列表项之间的垂直间距 */
+    margin-right: 20px; /* 列表项之间的水平间距 */
+    font-size: 16px;
+    color: #0432a2;
+}
+#newsList p {
+    color: black;
+}
+/* 最后一个列表项不需要右边距 */
+#newsList li:nth-child(even) {
+    margin-right: 0;
+}
+
+/* 当屏幕宽度较小时，将所有列表项变回上下排列 */
+@media (max-width: 600px) {
+    #newsList {
+        flex-direction: column; /* 垂直排列 */
+    }
+
+    #newsList li {
+        flex: 1 0 100%; /* 占据整行 */
+        margin-right: 0; /* 移除水平间距 */
+    }
+}
+
+/* 新闻标题和描述样式（假设标题和描述在同一行内，用破折号分隔） */
+#newsList li::before {
+    content: "● "; /* 在标题前添加一个小圆点 */
+    font-weight: bold;
+}
+
+/* 加载更多按钮点击后的样式 */
+#loadMore.disabled {
+    background-color: #ccc; /* 点击后背景色变暗 */
+    cursor: not-allowed; /* 鼠标悬停时变为禁止图标 */
+}
+
+/* 服务支持链接样式 */
+#support a {
+    text-decoration: none; /* 去除下划线 */
+    color: #007BFF; /* 链接颜色 */
+    font-size: 1.2em; /* 字体大小 */
+    display: inline-block; /* 作为行内块级元素显示 */
+    margin-bottom: 10px; /* 下外边距 */
+}
+
+#support a:hover {
+    color: #ff6347;
+}
+
+/* 服务支持整体样式 */
+#support {
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: space-between; /* 两端对齐，使子元素分散在容器两侧 */
+    align-items: flex-start; /* 子元素在交叉轴（这里是垂直轴）上对齐到开始位置 */
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* 支持信息样式 */
+.support-1 {
+    margin-top: 30px;
+    padding-left: 50px;
+    flex: 1 0 auto; /* 弹性增长，但不收缩，自动设置基础大小 */
+    text-align: left; /* 文本右对齐 */
+}
+
+/* 服务列表样式 */
+.service-2 {
+    margin-top: 30px;
+    padding-right: 150px;
+    flex: 1 0 auto; /* 同样设置弹性增长，但不收缩，自动设置基础大小 */
+    text-align: right; /* 文本右对齐 */
+}
+
+#support p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 产品中心链接样式 */
+#products a {
+    text-decoration: none; /* 去除下划线 */
+    color: #007BFF; /* 链接颜色 */
+    font-size: 1.2em; /* 字体大小 */
+    display: inline-block; /* 作为行内块级元素显示 */
+    margin-bottom: 10px; /* 下外边距 */
+}
+
+/* 科研基地链接样式 */
+#research-base a {
+    text-decoration: none; /* 去除下划线 */
+    color: #007BFF; /* 链接颜色 */
+    font-size: 1.2em; /* 字体大小 */
+    display: inline-block; /* 作为行内块级元素显示 */
+    margin-bottom: 10px; /* 下外边距 */
+}
+
+/* 科研基地段落样式 */
+#research-base p {
+    font-size: 1em; /* 字体大小 */
+    line-height: 1.5; /* 行高 */
+    color: #333; /* 文本颜色 */
+    margin-bottom: 15px; /* 段落下外边距 */
+}
+
+/* 科研基地整体样式 */
+#research-base {
+    background-color: #f5f5f5; /* 背景色 */
+    padding: 20px; /* 内边距 */
+    border: 1px solid #ddd; /* 边框 */
+    border-radius: 5px; /* 边框圆角 */
+    margin-bottom: 20px; /* 下外边距，与其他部分保持间距 */
+}
+
+#jobs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+#jobs a {
+    text-decoration: none; /* 去除下划线 */
+    color: #007BFF; /* 链接颜色 */
+    font-size: 1.2em; /* 字体大小 */
+    display: inline-block; /* 作为行内块级元素显示 */
+    margin-bottom: 10px; /* 下外边距 */
+}
+
+#jobs a:hover {
+    color: #0056b3;
+}
+
+#jobs p {
+    margin-top: 10px;
+}
+
+.job-content {
+    flex: 1; /* 占据剩余空间 */
+}
+
+.social-links {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+}
+
+.social-links img {
+    width: 100px; /* 根据需要调整二维码图片大小 */
+    height: 100px;
+    margin-left: 10px; /* 二维码之间的间距 */
+}
+
+/* 底部栏样式 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    bottom: 0; /* 底部对齐 */
+    width: 100%;
+}
